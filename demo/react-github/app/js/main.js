@@ -24942,7 +24942,7 @@ module.exports = {
     emptyUser: emptyUser
 };
 
-},{"../dispatcher/github-dispatcher":233}],225:[function(require,module,exports){
+},{"../dispatcher/github-dispatcher":234}],225:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25079,7 +25079,7 @@ var App = function (_Component) {
 
 exports.default = App;
 
-},{"../actions/github-action":224,"../stores/github-store":235,"./github/Profile.jsx":229,"./github/Search.jsx":232,"react":220}],227:[function(require,module,exports){
+},{"../actions/github-action":224,"../stores/github-store":236,"./github/Profile.jsx":230,"./github/Search.jsx":233,"react":220}],227:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25093,6 +25093,65 @@ var _react = require('react');
 var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = require('react-router-dom');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var BrowserLink = function (_Component) {
+    _inherits(BrowserLink, _Component);
+
+    function BrowserLink(props) {
+        _classCallCheck(this, BrowserLink);
+
+        var _this = _possibleConstructorReturn(this, (BrowserLink.__proto__ || Object.getPrototypeOf(BrowserLink)).call(this, props));
+
+        console.log(props);
+        return _this;
+    }
+
+    _createClass(BrowserLink, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'li',
+                { role: 'presentation' },
+                _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { to: this.props.link },
+                    this.props.text
+                )
+            );
+        }
+    }]);
+
+    return BrowserLink;
+}(_react.Component);
+
+exports.default = BrowserLink;
+
+},{"react":220,"react-router-dom":183}],228:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = require('react-router-dom');
+
+var _BrowserLink = require('./BrowserLink.jsx');
+
+var _BrowserLink2 = _interopRequireDefault(_BrowserLink);
 
 var _App = require('./App.jsx');
 
@@ -25134,47 +25193,11 @@ var Index = function (_Component) {
                     null,
                     _react2.default.createElement(
                         'div',
-                        null,
-                        _react2.default.createElement(
-                            'ul',
-                            null,
-                            _react2.default.createElement(
-                                'li',
-                                null,
-                                _react2.default.createElement(
-                                    _reactRouterDom.Link,
-                                    { to: '/' },
-                                    'App'
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'li',
-                                null,
-                                _react2.default.createElement(
-                                    _reactRouterDom.Link,
-                                    { to: '/about' },
-                                    'About'
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'li',
-                                null,
-                                _react2.default.createElement(
-                                    _reactRouterDom.Link,
-                                    { to: '/test/phan' },
-                                    'test phan'
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'li',
-                                null,
-                                _react2.default.createElement(
-                                    _reactRouterDom.Link,
-                                    { to: '/test/chon' },
-                                    'test chon'
-                                )
-                            )
-                        )
+                        { className: 'nav nav-tabs' },
+                        _react2.default.createElement(_BrowserLink2.default, { link: '/', text: 'APP' }),
+                        _react2.default.createElement(_BrowserLink2.default, { link: '/about', text: 'ABOUT' }),
+                        _react2.default.createElement(_BrowserLink2.default, { link: '/test/TEST-13223', text: 'TEST-1' }),
+                        _react2.default.createElement(_BrowserLink2.default, { link: '/test/TEST-22323', text: 'TEST-2' })
                     ),
                     _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _App2.default }),
                     _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/about', component: _About2.default }),
@@ -25189,7 +25212,7 @@ var Index = function (_Component) {
 
 exports.default = Index;
 
-},{"./About.jsx":225,"./App.jsx":226,"./Test.jsx":228,"react":220,"react-router-dom":183}],228:[function(require,module,exports){
+},{"./About.jsx":225,"./App.jsx":226,"./BrowserLink.jsx":227,"./Test.jsx":229,"react":220,"react-router-dom":183}],229:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25229,7 +25252,6 @@ var Test = function (_Component) {
                 _react2.default.createElement(
                     'h3',
                     null,
-                    'Hello ',
                     this.props.match.params.id
                 )
             );
@@ -25241,7 +25263,7 @@ var Test = function (_Component) {
 
 exports.default = Test;
 
-},{"react":220}],229:[function(require,module,exports){
+},{"react":220}],230:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25407,7 +25429,7 @@ var Profile = function (_Component) {
 
 exports.default = Profile;
 
-},{"./RepoList.jsx":231,"react":220,"react-dom":45}],230:[function(require,module,exports){
+},{"./RepoList.jsx":232,"react":220,"react-dom":45}],231:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25472,7 +25494,7 @@ var Repo = function (_Component) {
 
 exports.default = Repo;
 
-},{"react":220}],231:[function(require,module,exports){
+},{"react":220}],232:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25528,7 +25550,7 @@ var RepoList = function (_Component) {
 
 exports.default = RepoList;
 
-},{"./Repo.jsx":230,"react":220}],232:[function(require,module,exports){
+},{"./Repo.jsx":231,"react":220}],233:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25610,7 +25632,7 @@ var Search = function (_Component) {
 
 exports.default = Search;
 
-},{"react":220}],233:[function(require,module,exports){
+},{"react":220}],234:[function(require,module,exports){
 'use strict';
 
 var Dispatcher = require('flux').Dispatcher;
@@ -25618,7 +25640,7 @@ var dispatcher = new Dispatcher();
 
 module.exports = dispatcher;
 
-},{"flux":25}],234:[function(require,module,exports){
+},{"flux":25}],235:[function(require,module,exports){
 'use strict';
 
 var _react = require('react');
@@ -25629,15 +25651,15 @@ var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _Link = require('./components/Link.jsx');
+var _Index = require('./components/Index.jsx');
 
-var _Link2 = _interopRequireDefault(_Link);
+var _Index2 = _interopRequireDefault(_Index);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom2.default.render(_react2.default.createElement(_Link2.default, null), document.getElementById('app'));
+_reactDom2.default.render(_react2.default.createElement(_Index2.default, null), document.getElementById('app'));
 
-},{"./components/Link.jsx":227,"react":220,"react-dom":45}],235:[function(require,module,exports){
+},{"./components/Index.jsx":228,"react":220,"react-dom":45}],236:[function(require,module,exports){
 "use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -25756,4 +25778,4 @@ _githubDispatcher2.default.register(function (action) {
 });
 module.exports = githubStore;
 
-},{"../dispatcher/github-dispatcher":233,"events":1}]},{},[234]);
+},{"../dispatcher/github-dispatcher":234,"events":1}]},{},[235]);

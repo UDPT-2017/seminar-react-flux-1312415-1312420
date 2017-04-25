@@ -20,17 +20,19 @@ Yêu cầu **GIT**
 
 Yêu cầu **bắt buộc**
 * [x] Source code demo
-* [ ] Slide thuyết trình
+* [x] Slide thuyết trình
 * [ ] Tạo github page để viết lại báo cáo cho nội dung đề tài tìm hiểu
 
 Các **nội dung lý thuyết** dự định tìm hiểu. Nhóm liệt kê các nội dung đã làm được vào bên dưới và check vào các nội dung đã tìm hiểu được.
-* [ ] Nội dung 1
-* [ ] Nội dung 2
+* [x] Tìm hiểu về React Component
+* [x] Tìm hiểu về React Router
+* [x] Tìm hiểu về kiến trúc Flux
 
 Các **chức năng của demo** đã thực hiện hoặc dự kiến thực hiện. Nhóm check vào các chức năng đã làm
-* [ ] Chức năng 1
-* [ ] Chức năng 2
-
+* [x] Demo 1 tạo 1 component đơn giản mà không cần node
+* [x] Demo 2 Tạo 1 TodoList dùng react
+* [x] Demo 3 Tạo 1 TodoList dùng react có sử dụng kiến trúc Flux
+* [x] Demo 4 Tạo 1 App cho biết profile của user trên github có sử dụng React, Flux, React-router để phân trang
 ## Demo
 
 Link ảnh GIF demo ứng dụng:

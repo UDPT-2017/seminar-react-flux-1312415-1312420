@@ -6,7 +6,7 @@ class Test extends Component {
         return(
             <div>
                 <h3>
-                    Hello {this.props.match.params.id}
+                    {this.props.match.params.id}
                 </h3>
             </div>
         )
