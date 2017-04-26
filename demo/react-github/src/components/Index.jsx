@@ -16,8 +16,8 @@ class Index extends Component {
                     <div className="nav nav-tabs">
                         <BrowserLink link="/" text="APP" />
                         <BrowserLink link="/about" text="ABOUT" />
-                        <BrowserLink link="/test/TEST-13223" text="TEST-1" />
-                        <BrowserLink link="/test/TEST-22323" text="TEST-2"/>
+                        <BrowserLink link="/test/TEST-1" text="TEST-1" />
+                        <BrowserLink link="/test/TEST-2" text="TEST-2"/>
                     </div>
                     <Route exact path='/' component={App}/>
                     <Route exact path='/about' component={About}/>
