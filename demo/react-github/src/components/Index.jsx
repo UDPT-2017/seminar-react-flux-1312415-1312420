@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import {
     BrowserRouter as Router,
-    Route
+    Route,
+    Link
 } from 'react-router-dom';
 import BrowserLink from './BrowserLink.jsx';
 import App from './App.jsx';
@@ -14,10 +15,26 @@ class Index extends Component {
             <Router>
                 <div>
                     <div className="nav nav-tabs">
-                        <BrowserLink link="/" text="APP" />
-                        <BrowserLink link="/about" text="ABOUT" />
-                        <BrowserLink link="/test/TEST-1" text="TEST-1" />
-                        <BrowserLink link="/test/TEST-2" text="TEST-2"/>
+                        <li role="presentation">
+                            <Link to='/'>
+                                HOME
+                            </Link>
+                        </li>
+                        <li role="presentation">
+                            <Link to='/about'>
+                                ABOUT
+                            </Link>
+                        </li>
+                        <li role="presentation">
+                            <Link to='/test/Test-1'>
+                                Test-1
+                            </Link>
+                        </li>
+                        <li role="presentation">
+                            <Link to='/test/Test-2'>
+                                Test-2
+                            </Link>
+                        </li>
                     </div>
                     <Route exact path='/' component={App}/>
                     <Route exact path='/about' component={About}/>
