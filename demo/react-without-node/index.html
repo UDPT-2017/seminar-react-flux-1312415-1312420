@@ -14,17 +14,16 @@
     var btnStyle = {
         background: "pink"
     };
-    var PinkButton = React.createClass({
-
-        onClick: function (e) {
+    class PinkButton extends React.Component{
+        onClick(e) {
             alert('hello');
-        },
-        render: function () {
+        }
+        render() {
             return (
                     <button onClick={this.onClick} style={btnStyle}> Click me</button>
             )
         }
-    });
+    };
     ReactDOM.render(<PinkButton />, document.getElementById("buttonhere"));
 </script>
 </body>
