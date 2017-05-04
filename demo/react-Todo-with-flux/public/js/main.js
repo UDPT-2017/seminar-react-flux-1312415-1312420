@@ -21587,6 +21587,7 @@ _dispatcher2.default.register(function (action) {
         case "CREATE_TODO":
             {
                 todoStore.createTodo(action.text);
+                return;
             }
     }
 });

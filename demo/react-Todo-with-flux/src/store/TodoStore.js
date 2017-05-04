@@ -23,6 +23,7 @@ Dispatcher.register(function (action) {
     switch (action.type) {
         case "CREATE_TODO": {
             todoStore.createTodo(action.text);
+            return;
         }
     }
 });
