@@ -4,7 +4,6 @@ import {
     Route,
     Link
 } from 'react-router-dom';
-import BrowserLink from './BrowserLink.jsx';
 import App from './App.jsx';
 import About from './About.jsx';
 import Test from './Test.jsx';
