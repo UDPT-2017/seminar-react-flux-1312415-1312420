@@ -3,7 +3,7 @@
 **Tên đề tài** là một repository trong đề tài tìm hiểu của lớp Ứng dụng phân tán.
 
 Thành viên:
-* [x] **1312415** Tên sinh viên 1 (tên tài khoản github)
+* [x] **1312415** Trần Thanh Phán (tên tài khoản github)
 * [ ] **MSSV2** Tên sinh viên 2 (tên tài khoản github)
 
 URL: **Link github page**
